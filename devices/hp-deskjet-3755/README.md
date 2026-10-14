@@ -28,14 +28,20 @@ If any of the above prints correctly, there is nothing to build here.
 
 ## So why is this folder in the repo?
 
-Two legitimate reasons, both small:
-1. **Known-good setup notes** — a reference entry so others with a 3755 land on
-   the working path immediately instead of hunting HP forums.
-2. **Optional tuned PPD** — if the driverless/HPLIP defaults get margins or
-   color wrong for a specific use, a small PPD override can live in `override/`.
+The real, useful override for this printer isn't a driver — it's reclaiming it
+after **HP Instant Ink**:
 
-This is **not** a reverse-engineering target — the protocol is already open
-(HPLIP). For RE practice, pick a device with no upstream support.
+- 👉 **[override/post-instant-ink-setup.md](override/post-instant-ink-setup.md)**
+  — run the 3755 on your own third-party 65XL cartridges with no HP account, no
+  HP Smart dependency, no subscription re-checks, and firmware updates declined
+  so compatible ink doesn't get locked out.
+
+Plus, secondarily:
+- **Known-good setup notes** — so others with a 3755 land on the working
+  (driverless) path immediately instead of hunting HP forums.
+
+This is **not** a reverse-engineering target — the print protocol is already
+open (HPLIP/IPP). For RE practice, pick a device with no upstream support.
 
 ## Reset procedures (control-panel has no screen — button combos only)
 

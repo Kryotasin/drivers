@@ -47,7 +47,7 @@ drivers/
 
 | Device         | Stage               | Works? |
 |----------------|---------------------|--------|
-| hp-deskjet-3755 | 🟢 supported upstream (IPP/HPLIP) | yes — driverless |
+| hp-deskjet-3755 | 🟢 de-subscription / local-only guide | yes — driverless |
 
 ## Getting started
 
