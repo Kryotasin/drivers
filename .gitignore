@@ -1,0 +1,10 @@
+# Raw/unsanitized captures must never be committed.
+*.pcap
+*.pcapng
+*.sanitized
+# Python
+__pycache__/
+*.pyc
+# OS cruft
+.DS_Store
+Thumbs.db
