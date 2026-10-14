@@ -37,6 +37,7 @@ drivers/
 │       ├── override/              # the shippable driver/PPD/filter
 │       └── tests/                 # how we verify it actually prints
 ├── tools/
+│   ├── netscan/             # discover + classify devices on your network (RE step 0)
 │   ├── capture/              # scripts to capture USB/network traffic
 │   └── decode/              # scripts to parse captures into notes
 ├── docs/                    # shared methodology + legal/ethics
@@ -51,6 +52,7 @@ drivers/
 
 ## Getting started
 
+- Finding + classifying what's on your network → [docs/network-recon.md](docs/network-recon.md) ([`tools/netscan`](tools/netscan/))
 - Reverse-engineering a device from scratch → [docs/methodology.md](docs/methodology.md)
 - Contributing a device or fix → [docs/contributing.md](docs/contributing.md)
 - The ground rules → [docs/legal-and-ethics.md](docs/legal-and-ethics.md)

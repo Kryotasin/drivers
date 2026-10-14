@@ -8,3 +8,9 @@ __pycache__/
 # OS cruft
 .DS_Store
 Thumbs.db
+
+# netscan output — contains real network identifiers, never commit
+tools/netscan/*.json
+*.scan.md
+*-scan.md
+.oui_cache.json
