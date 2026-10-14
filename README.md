@@ -59,8 +59,13 @@ Each project is independent. Click into its folder for full instructions.
 | Tool | What it does | Run it |
 |------|--------------|--------|
 | **[netscan](tools/netscan/)** | Discover every device on a network you control, decode each MAC's vendor, and classify it by de-cloud/local-control potential. "RE step 0." | `python tools/netscan/netscan.py` |
+| **[deviceprobe](tools/deviceprobe/)** | Probe a device's local-control surface — map open ports to known local APIs (Kasa, Tuya, Cast, RTSP, IPP, SOAP…). "RE step 1." | `python tools/deviceprobe/deviceprobe.py <ip>` |
 | **[capture](tools/capture/)** | Capture + sanitize USB/network traffic from a device (for protocol RE). | see folder README |
 | **[decode](tools/decode/)** | Diff two captures to isolate protocol fields. | `python tools/decode/bytediff.py a b` |
+
+Every tool also ships as a **zero-dependency Claude Code MCP server** — drive
+them conversationally ("scan my network", "probe 192.168.1.1"). See
+**[docs/mcp-servers.md](docs/mcp-servers.md)**.
 
 ### 📠 Devices (guides & overrides)
 
@@ -73,6 +78,7 @@ Each project is independent. Click into its folder for full instructions.
 | Doc | When to read it |
 |-----|-----------------|
 | **[network-recon.md](docs/network-recon.md)** | Finding + triaging what's on your network (start here) |
+| **[mcp-servers.md](docs/mcp-servers.md)** | Using the tools from Claude Code via MCP |
 | **[methodology.md](docs/methodology.md)** | Reverse-engineering a device from scratch |
 | **[contributing.md](docs/contributing.md)** | Adding a device or tool |
 | **[legal-and-ethics.md](docs/legal-and-ethics.md)** | The ground rules — read before contributing |
@@ -94,8 +100,11 @@ A device folder can ship any of:
 
 ```
 drivers/
+├── .mcp.json                # Claude Code MCP server registry (netscan, deviceprobe)
 ├── tools/
-│   ├── netscan/             # device discovery + de-cloud triage (Python, runnable)
+│   ├── mcp_stdio.py         # zero-dependency MCP stdio server (shared)
+│   ├── netscan/             # device discovery + de-cloud triage (+ mcp_server.py)
+│   ├── deviceprobe/         # local-control surface probe (+ mcp_server.py)
 │   ├── capture/             # capture + sanitize device traffic
 │   └── decode/              # parse captures into protocol notes
 ├── devices/

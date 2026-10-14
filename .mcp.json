@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "netscan": {
+      "command": "python",
+      "args": ["tools/netscan/mcp_server.py"]
+    },
+    "deviceprobe": {
+      "command": "python",
+      "args": ["tools/deviceprobe/mcp_server.py"]
+    }
+  }
+}

@@ -238,6 +238,13 @@ All handled automatically; you don't pass anything platform-specific.
 
 ---
 
+## Use from Claude Code (MCP)
+
+netscan ships an MCP server (`mcp_server.py`) exposing a `scan_network` tool, so
+you can ask Claude Code *"scan my network and tell me what's de-cloudable"*
+instead of running the CLI. It's zero-dependency (no `pip install mcp`). See
+[../../docs/mcp-servers.md](../../docs/mcp-servers.md) for setup.
+
 ## Privacy & output hygiene
 
 A scan report is a **map of your home network** (MACs, IPs, device names). Treat
