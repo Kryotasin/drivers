@@ -31,7 +31,7 @@ A device folder can ship any of:
 ```
 drivers/
 ├── devices/
-│   └── canon-printer/        # first target (see its README)
+│   └── hp-deskjet-3755/      # reference entry (already supported upstream)
 │       ├── reverse-engineering/   # protocol notes, decoded dumps
 │       ├── captures/              # sanitized sample captures
 │       ├── override/              # the shippable driver/PPD/filter
@@ -47,7 +47,7 @@ drivers/
 
 | Device         | Stage               | Works? |
 |----------------|---------------------|--------|
-| canon-printer  | 🟡 reverse-engineering | not yet |
+| hp-deskjet-3755 | 🟢 supported upstream (IPP/HPLIP) | yes — driverless |
 
 ## Getting started
 
